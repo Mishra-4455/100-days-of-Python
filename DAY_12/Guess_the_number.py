@@ -5,10 +5,7 @@ print(art.logo)
 print("Welcome to Guess the Number!!")
 print("I am thinking of a number between 1 to 100.")
 thinking = random.randint(1,101)
-if input("Choose a difficulty. Type 'easy' or 'hard':\n") == 'easy':
-    lives = 10
-else:
-    lives = 5
+choice = input("Choose a difficulty. Type 'easy' or 'hard':\n").lower()
 
 def game_over():
     if lives == 0:
@@ -36,4 +33,11 @@ def guess_number():
         print("Guess again.")
         guess_number()
 
-guess_number()
+if choice == "easy":
+    lives = 10
+    guess_number()
+elif choice == "hard":
+    lives = 5
+    guess_number()
+else:
+    print("Please choose a suitable input.")
