@@ -1,8 +1,9 @@
 import requests
+import os
 from datetime import datetime
 
 USERNAME = "abhinav5"
-TOKEN = "sjdioajdskljawodno"
+TOKEN = os.environ["API_TOKEN"]
 
 pixela_endpoint = "https://pixe.la/v1/users"
 user_params = {
